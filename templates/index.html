@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Credit Card Checker!!</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Credit Card Validator</h2>
+
+            <form method="post">
+                <input type="text" name="card" placeholder="Enter Card Number" required>
+                <button type="submit"> Check </button>
+            </form>
+            {% if result == True %}
+            <p style="color: green;"> Valid Card Number </p>
+            {% elif result == False %}
+            <p style="color: red;"> Invalid Card Number</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
